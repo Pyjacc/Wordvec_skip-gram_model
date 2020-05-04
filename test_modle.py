@@ -8,7 +8,7 @@ from gensim.models import Word2Vec
 from gensim.models.word2vec import LineSentence
 import time
 
-w2v_model_path = "./data/w2v.model"
+w2v_model_path = "./data/w2v_2.model"
 sentence_path = './data/sentences.txt'
 new_sentence_path = "./data/sentences.txt"
 
@@ -49,7 +49,11 @@ def train_model_again(model, sentences_path, w2v_model_path):
 
 if __name__ == "__main__":
     # train_word2vec_model(sentence_path, w2v_model_path)
+
+    # 不能直接load train_word2vec_model.py训练出来的model,因为在train_word2vec_model.py中保存
+    # 模型的方式不能用load_model加载
     # model = load_model(w2v_model_path)
+    # 再次训练
     # train_model_again(model, new_sentence_path, w2v_model_path)
 
     model = load_model(w2v_model_path)
