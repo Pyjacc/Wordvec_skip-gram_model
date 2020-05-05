@@ -1,5 +1,8 @@
 '''
-    (1)利用前面清洗后的数据构建vocab词表,vocab词表即为用于 训练词向量的数据
+    (1)利用前面清洗后的数据构建vocab词表
+        注：vocab是词表,不是用于训练词向量的数据
+            后面train_word2vec_model.py中生成的sentences.txt才是语料库,才是用于训练词向量的数据
+
     (2)保存构建的词表
     (3)注意:是构建词表而不是词向量,词向量要在训练模型后才能得到
 '''
@@ -75,7 +78,7 @@ def build_vocab(words_line, sort=True, min_count=0, lower=False):
     return vocab_dict, reverse_vocab_dict
 
 
-# 保存用于训练词向量的数据
+
 def save_vocab_data(save_data_path, vocab):
     with open(save_data_path, mode="w", encoding="utf-8") as f:
         for line in vocab:
@@ -98,9 +101,7 @@ def save_reverse_vocab_data(save_reverse_data_path, reverse_vocab):
 if __name__ == "__main__":
     # words_line为一行一行的
     words_line = load_data(train_data_x_path, train_data_y_path, test_data_x_path)
-    # 生成用于训练词向量的数据
     vocab_dict, reverse_vocab_dict = build_vocab(words_line)
-    # 保存用于训练词向量的数据
     save_vocab_data(save_vocab_path, vocab_dict)
     save_reverse_vocab_data(save_reverse_vocab_path, reverse_vocab_dict)
 

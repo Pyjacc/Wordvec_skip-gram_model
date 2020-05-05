@@ -1,4 +1,5 @@
 '''
+    生成用于训练词向量的数据sentences.txt
     利用gensim训练skip-gram模型中的词向量,并保存词向量
 '''
 
@@ -16,7 +17,7 @@ train_x_seg_path = "./data/train_set_seg_x.txt"
 train_y_seg_path = "./data/train_set_seg_y.txt"
 test_x_seg_path = "./data/test_set_seg_x.txt"
 
-sentence_path = './data/sentences.txt'
+sentence_path = './data/sentences.txt'  #用于训练词向量的数据
 w2v_bin_path = "./data/w2v.model"       #保存为model或bin文件都行
 # w2v_bin_path = "./data/w2v.bin"
 save_model_txt_path = "./data/word2vec.txt"
