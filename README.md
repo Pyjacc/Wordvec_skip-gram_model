@@ -1,5 +1,5 @@
 # Wordvec_skip-gram_model
-NLP学习，第一章homework
+NLP学习，第一章homework、第二章homework
 
 ## Homework-week1
 ### 1. 熟悉项目数据
