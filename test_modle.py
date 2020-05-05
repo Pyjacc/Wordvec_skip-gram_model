@@ -50,9 +50,10 @@ def train_model_again(model, sentences_path, w2v_model_path):
 if __name__ == "__main__":
     # train_word2vec_model(sentence_path, w2v_model_path)
 
-    # 不能直接load train_word2vec_model.py训练出来的model,因为在train_word2vec_model.py中保存
-    # 模型的方式不能用load_model加载
+    # 若保存模型的方式为w2v.wv.save_word2vec_format,则不能直接用Word2Vec.load()方式加载模型,要用
+    # KeyedVectors.load_word2vec_format()方式加载
     # model = load_model(w2v_model_path)
+
     # 再次训练
     # train_model_again(model, new_sentence_path, w2v_model_path)
 

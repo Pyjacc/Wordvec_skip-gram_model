@@ -12,6 +12,7 @@ import jieba
 from jieba import posseg
 import multiprocessing as mp
 import time
+import re
 
 
 
@@ -112,6 +113,9 @@ def preprocess_sentence(data_fram, stop_words, save_data_path):
     with open(save_data_path, mode="w", encoding="utf-8") as f:
         for line in data_fram:
             if isinstance(line, str):
+                # 去除特殊字符,用""替换特殊字符
+                line = re.sub(r'[\s+\-\|\!\/\[\]\{\}_,.$%^*(+\"\')]+|[:：+——()?【】“”！，。？、~@#￥%……&*（）]+|车主说|技师说|语音|图片|你好|您好',
+                            '', line)
                 words_seq, words_pos = segment(line, "word", True)          # 切词
                 words_list = remove_words(words_seq)                        # 去除无用词
                 word_ist = [word for word in words_list if word not in stop_words]  #去除停用词
