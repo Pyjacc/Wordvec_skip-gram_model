@@ -14,7 +14,7 @@ NLP学习，第一章homework、第二章homework
 ## Homework-week2
 ### 1. 通过gensim训练词向量
 #### 1.1 利用分词后的数据生成用于训练词向量的训练数据  
-即Homework-week1中的vocab.txt
+即Homework-week1中的sentences.txt（注意不是vocab.txt）
 #### 1.2 保存训练数据
 #### 1.3 应用gensim中Word2Vec或Fasttext训练词向量  
 见train_word2vec_model.py中的build_skip_gram_model函数
