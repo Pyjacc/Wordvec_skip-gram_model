@@ -29,7 +29,7 @@ test_data_x_save_path = "./data/test_set_seg_x.txt"
 
 
 # 2. 读取数据
-def parse_train_test_data(train_data_patch, test_data_path):
+def parse_train_test_data(train_data_path, test_data_path):
     # 处理训练集数据
     train_data = pd.read_csv(train_data_path, encoding='utf-8')
     # 去除含有无效数据的列

@@ -38,7 +38,7 @@ def get_embeddig_matrix_1(wv_model, save_embedding_path):
     # 矩阵初始化
     embedding_matrix = np.zeros((vocab_size, embedding_dim))
     # 按顺序将词对应的词向量填充进矩阵
-    for i in range(10):
+    for i in range(vocab_size):
         embedding_matrix[i, :] = wv_model.wv[wv_model.wv.index2word[i]]
     embedding_matrix = embedding_matrix.astype("float32")
     assert embedding_matrix.shape == (vocab_size, embedding_dim)

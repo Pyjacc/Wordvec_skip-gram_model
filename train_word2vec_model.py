@@ -73,7 +73,7 @@ def build_skip_gram_model(train_x_seg_path, train_y_seg_path, test_x_seg_path,
     :param train_x_seg_path: 训练集x路径
     :param train_y_seg_path: 训练集y路径
     :param test_x_seg_path: 测试集x路径
-    :param w2v_bin_path: 保存训练模型的领
+    :param w2v_bin_path: 保存训练模型的路径
     :param sentence_path: 保存拼接的大句子的路径
     :param min_count: 词频阈值
     :return:
