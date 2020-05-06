@@ -122,7 +122,7 @@ def preprocess_sentence(data_fram, stop_words, save_data_path):
                 words_line = " ".join(word_ist)
                 f.write("%s" % words_line)      # 保存数据到文件
                 f.write("\n")
-    f.close()
+    f.close()           #with打开的文件不用手动close,会自动close
 
 
 # 7, 保存清洗后的数据

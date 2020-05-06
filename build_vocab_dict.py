@@ -86,7 +86,7 @@ def save_vocab_data(save_data_path, vocab):
     f.close()
 
 
-def save_reverse_vocab_data(save_reverse_data_path, reverse_vocab):
+def save_reverse_vocab_data(save_reverse_vocab_path, reverse_vocab):
     # 不要encoding="utf-8":二进制文件不要制定文件格式
     with open(save_reverse_vocab_path, mode="w")  as f:
         for line in reverse_vocab:
