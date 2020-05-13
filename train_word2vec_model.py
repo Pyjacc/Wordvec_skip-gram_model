@@ -127,7 +127,7 @@ def load_save_model(w2v_bin_path, vocab_path, save_txt_path):
     for word, index in vocab.word2id.items():
         #注：若要使用腾讯的词向量,只要在加载skip_gram_model时w2v_bin_path用腾讯词向量的路径
         #但是上面vocab_path还是要用自己的vocab.txt文件的路径
-        if word in skip_gram_model.wv.vocab:
+        if word in skip_gram_model.wv.vocab:    #构建embedding层
             word_dict[index] = skip_gram_model[word]
         else:
             #随机初始化,值的大小为-0.025到0.025,词向量维度为256
