@@ -48,6 +48,7 @@ def build_vocab(words_line, sort=True, min_count=0, lower=False):
     result = []
     if sort:
         # sort by count(根据词的频率进行排序)
+        # 根据词频进行排序是为了截断（即只选取整个词表中的一部分作为词表）
         dict = defaultdict(int)     # 用于统计词频
         # 取出每一个词,并统计词频
         for words in words_line:
