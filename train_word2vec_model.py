@@ -108,7 +108,7 @@ def build_skip_gram_model(train_x_seg_path, train_y_seg_path, test_x_seg_path,
 
 
 #加载模型,然后对模型进行压缩保存
-def load_model(w2v_bin_path, vocab_path, save_txt_path):
+def load_save_model(w2v_bin_path, vocab_path, save_txt_path):
     # load model（加载模型的方法）
     # 注意：不同的保存方式对应不同的加载模型的方式
     # skip_gram_model = KeyedVectors.load_word2vec_format(w2v_bin_path, binary=True)
@@ -200,4 +200,4 @@ if __name__ == "__main__":
     end_time = time.time()
     print("train model time: %d seconds" % (end_time - start_time))
 
-    load_model(w2v_bin_path, vocab_path, save_model_txt_path)
+    load_save_model(w2v_bin_path, vocab_path, save_model_txt_path)
