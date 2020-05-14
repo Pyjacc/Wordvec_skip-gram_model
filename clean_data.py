@@ -41,7 +41,7 @@ def parse_train_test_data(train_data_path, test_data_path):
     train_y = []
     if "Report" in train_data.columns:
         train_y = train_data.Report
-        # assert len(train_x) == len(train_y)
+        assert len(train_x) == len(train_y)
 
 
     # 处理测试集数据
@@ -75,9 +75,9 @@ def load_stop_words(stop_words_path):
 
     output： 返回对句子进行切割后的词（list类型）
 '''
-def segment(sentence, cut_pyte="word", pos=False):
+def segment(sentence, cut_type="word", pos=False):
     if pos:
-        if cut_pyte == "word":
+        if cut_type == "word":
             word_seq_pos = posseg.lcut(sentence)
             word_seq, word_pos = [], []
             # 第一个位置为词，第二个位置为词性
@@ -85,7 +85,7 @@ def segment(sentence, cut_pyte="word", pos=False):
                 word_seq.append(word)
                 word_pos.append(p)
             return word_seq, word_pos
-        elif cut_pyte == "char":
+        elif cut_type == "char":
             word_seq = list(sentence)
             word_pos = []
             for word in word_seq:
@@ -93,9 +93,9 @@ def segment(sentence, cut_pyte="word", pos=False):
                 word_pos.append(word_seq_pos[0].flag)   # word_seq_pos[0].flag：获取字符对应的词性
             return word_seq, word_pos
     else:
-        if cut_pyte == "word":
+        if cut_type == "word":
             return jieba.lcut(sentence)
-        elif cut_pyte == "char":
+        elif cut_type == "char":
             return list(sentence)
 
 
