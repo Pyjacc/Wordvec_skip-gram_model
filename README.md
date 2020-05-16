@@ -1,7 +1,7 @@
 # Wordvec_skip-gram_model
 NLP学习，第一章homework、第二章homework
 
-## Homework-week1
+## 一、Homework-week1
 ### 1. 熟悉项目数据
 数据地址：https://aistudio.baidu.com/aistudio/competition/detail/3
 ### 2. 数据处理
@@ -11,7 +11,7 @@ NLP学习，第一章homework、第二章homework
 ### 4. 建立Vovab词汇表
 应用分词后的数据建立Vovab词汇表，并保存到vocab.txt  （见build_vocab_dict.py）
 词汇表格式为：词 词的index
-## Homework-week2
+## 二、Homework-week2
 ### 1. 通过gensim训练词向量
 #### 1.1 利用分词后的数据生成用于训练词向量的训练数据  
 即Homework-week1中的sentences.txt（注意不是vocab.txt）
